@@ -14,10 +14,19 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewBinding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(viewBinding.root)
         dataList.apply {
-            add(0,Memo("기본데이터입니다"))
+            add(Memo("기본데이터입니다"))
+            add(Memo("기본데이터입니다2"))
         }
+
+        val extra = intent.extras
+        val data = extra?.get("memo text")
+        val bundle:Bundle = Bundle()
+
+        dataList.apply {
+            add(Memo("${data}"))
+        }
+
         val memoAdapter = MemoAdapter(dataList)
         viewBinding.rvMemo.adapter = memoAdapter
         viewBinding.rvMemo.layoutManager = LinearLayoutManager(this)
@@ -25,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,MemoActivity::class.java)
             startActivity(intent)
         }
-
+        setContentView(viewBinding.root)
 
     }
 }
