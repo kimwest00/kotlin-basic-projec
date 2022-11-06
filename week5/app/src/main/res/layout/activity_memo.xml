@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-<EditText
-    android:id="@+id/et_memo_write"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    />
+    <TextView
+        android:id="@+id/tv_memo_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Memo"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_memo_write"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/et_memo_write"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_memo_save"
+        app:layout_constraintTop_toTopOf="@id/tv_memo_title" />
+
     <Button
         android:id="@+id/bt_memo_save"
         android:text="저장"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/et_memo_write"/>
+        app:layout_constraintTop_toBottomOf="@+id/et_memo_write"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
