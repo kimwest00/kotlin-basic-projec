@@ -25,4 +25,7 @@ class DataRVAdapter(private val dataList : ArrayList<BusinessCard>):RecyclerView
     }
     //표현할 Item의 총 갯수
     override fun getItemCount(): Int = dataList.size
+    override fun getItemViewType(position: Int): Int {
+        return position
+    }
 }

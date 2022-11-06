@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
             add(BusinessCard("김만서","hello"))
             add(BusinessCard("김민수","hola"))
             add(BusinessCard("김만수","곤니치와"))
-            add(BusinessCard("김민서","안녕하세요"))
             add(BusinessCard("김만서","hello"))
             add(BusinessCard("김민수","hola"))
             add(BusinessCard("김만수","곤니치와"))
@@ -43,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         val dataRVAdapter = DataRVAdapter(dataList)
         viewBinding.rvBusinessCard.adapter = dataRVAdapter
         viewBinding.rvBusinessCard.layoutManager = LinearLayoutManager(this)
-
+//        rcv.setItemViewCacheSize(adapter.currentList.size)
 
 
     }
