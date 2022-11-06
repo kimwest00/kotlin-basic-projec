@@ -5,13 +5,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import umc.standard.week5.databinding.ListviewItemBinding
 
-class DataRVAdapter(private val dataList : ArrayList<BusinessCard>):RecyclerView.Adapter<DataRVAdapter.DataViewHolder>() {
+class MemoAdapter(private val dataList : ArrayList<Memo>):RecyclerView.Adapter<MemoAdapter.DataViewHolder>() {
 
     //ViewHolder 객체
     inner class DataViewHolder(private val viewBinding: ListviewItemBinding):RecyclerView.ViewHolder(viewBinding.root){
-        fun bind(data : BusinessCard){
-            viewBinding.ivItemTvName.text = data.name
-            viewBinding.ivItemTvContent.text = data.content
+        fun bind(data : Memo){
+            viewBinding.ivItemTvName.text = data.text
         }
     }
     //ViewHolder 만들어질때 실행할 동작
