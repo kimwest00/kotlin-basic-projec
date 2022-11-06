@@ -3,32 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:weightSum="5">
-    <ImageView
-        android:layout_weight="1"
-        android:src="@mipmap/ic_launcher"
-        android:layout_width="0dp"
+
+    <TextView
+        android:id="@+id/tv_memo_text"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:contentDescription="thumbnail" />
-    <LinearLayout
-        android:layout_weight="3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/iv_item_tv_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="김민서" />
-        <TextView
-            android:id="@+id/iv_item_tv_content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="umc 안드로이드 파트"/>
-    </LinearLayout>
-    <Switch
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        />
+        android:text="김민서" />
+
 </LinearLayout>

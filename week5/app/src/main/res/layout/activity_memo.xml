@@ -17,6 +17,7 @@
         android:id="@+id/et_memo_write"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:hint="메모를 입력해주세요"
         app:layout_constraintBottom_toTopOf="@+id/bt_memo_save"
         app:layout_constraintTop_toTopOf="@id/tv_memo_title" />
 

@@ -10,7 +10,7 @@ class MemoAdapter(private val dataList : ArrayList<Memo>):RecyclerView.Adapter<M
     //ViewHolder 객체
     inner class DataViewHolder(private val viewBinding: ListviewItemBinding):RecyclerView.ViewHolder(viewBinding.root){
         fun bind(data : Memo){
-            viewBinding.ivItemTvName.text = data.text
+            viewBinding.tvMemoText.text = data.text
         }
     }
     //ViewHolder 만들어질때 실행할 동작

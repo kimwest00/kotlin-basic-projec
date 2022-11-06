@@ -1,8 +1,8 @@
 package umc.standard.week5
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import umc.standard.week5.databinding.ActivityMainBinding
 
@@ -15,13 +15,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         viewBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
-
-        Log.d("dataList 출력","start")
-        print(dataList)
+        dataList.apply {
+            add(0,Memo("기본데이터입니다"))
+        }
         val memoAdapter = MemoAdapter(dataList)
-        viewBinding.rvBusinessCard.adapter = memoAdapter
-        viewBinding.rvBusinessCard.layoutManager = LinearLayoutManager(this)
-//        rcv.setItemViewCacheSize(adapter.currentList.size)
+        viewBinding.rvMemo.adapter = memoAdapter
+        viewBinding.rvMemo.layoutManager = LinearLayoutManager(this)
+        viewBinding.btMemoAdd.setOnClickListener{
+            val intent = Intent(this,MemoActivity::class.java)
+            startActivity(intent)
+        }
 
 
     }
