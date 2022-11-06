@@ -11,7 +11,7 @@ class CustomAdapter(context: Context, private val businessCardArrayList: ArrayLi
     val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
     lateinit var binding : ListviewItemBinding
 
-    override fun getCount(): Int =businessCardArrayList.size
+    override fun getCount(): Int = businessCardArrayList.size
 
     override fun getItem(p0: Int): Any = businessCardArrayList[p0]
     override fun getItemId(p0: Int): Long = p0.toLong()
