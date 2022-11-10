@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="memo_hint_text">이곳에 메모할내용을 입력해주세요</string>
+</resources>

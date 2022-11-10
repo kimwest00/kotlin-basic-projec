@@ -34,6 +34,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,MemoActivity::class.java)
             startActivity(intent)
         }
+//        memoAdapter.setOnItemClickListener(new Adapter.OnItemClickListener(){
+//           @Override
+//           public void onDeleteClick()
+//        });
         setContentView(viewBinding.root)
 
     }

@@ -5,6 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import umc.standard.week5.databinding.ListviewItemBinding
 
+//interface OnItemClickListener{
+//    void onEditClick(View v, int position);
+//    void onDeleteClick(View v, int position);
+//}
 class MemoAdapter(private val dataList : ArrayList<Memo>):RecyclerView.Adapter<MemoAdapter.DataViewHolder>() {
 
     //ViewHolder 객체
