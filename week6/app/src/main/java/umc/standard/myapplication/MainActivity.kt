@@ -21,19 +21,19 @@ class MainActivity : AppCompatActivity() {
                     R.id.cameraFragment -> {
                         supportFragmentManager
                             .beginTransaction()
-                            .replace(R.id.cameraFragment, CameraFragment())
+                            .replace(binding.frameLayout.id, CameraFragment())
                             .commit()
                     }
                     R.id.homeFragment -> {
                         supportFragmentManager
                             .beginTransaction()
-                            .replace(R.id.homeFragment, HomeFragment())
+                            .replace(binding.frameLayout.id, HomeFragment())
                             .commitAllowingStateLoss()
                     }
                     R.id.plantFragment -> {
                         supportFragmentManager
                             .beginTransaction()
-                            .replace(R.id.plantFragment, PlantFragment())
+                            .replace(binding.frameLayout.id, PlantFragment())
                             .commitAllowingStateLoss()
                     }
 
