@@ -14,35 +14,36 @@ class MainActivity : AppCompatActivity() {
             .beginTransaction()
             .replace(binding.frameLayout.id, HomeFragment())
             .commit()
-        binding.bottomNavi.setOnNavigationItemSelectedListener(
-            onNavigationItemSelectedListener
-        )
-    }
+        binding.bottomNavi.run {
+            setOnItemSelectedListener{item->
+                when(item.itemId){
+                    R.id.cameraFragment -> {
+                        supportFragmentManager
+                            .beginTransaction()
+                            .replace(R.id.cameraFragment, CameraFragment())
+                            .commit()
+                    }
+                    R.id.homeFragment -> {
+                        supportFragmentManager
+                            .beginTransaction()
+                            .replace(R.id.homeFragment, HomeFragment())
+                            .commitAllowingStateLoss()
+                    }
+                    R.id.plantFragment -> {
+                        supportFragmentManager
+                            .beginTransaction()
+                            .replace(R.id.plantFragment, PlantFragment())
+                            .commitAllowingStateLoss()
+                    }
 
-    private val onNavigationItemSelectedListener =
-        BottomNavigationView.OnNavigationItemSelectedListener {
-            when (it.itemId) {
-                R.id.cameraFragment -> {
-                    supportFragmentManager
-                        .beginTransaction()
-                        .replace(R.id.cameraFragment, CameraFragment())
-                        .commit()
                 }
-                R.id.homeFragment -> {
-                    supportFragmentManager
-                        .beginTransaction()
-                        .replace(R.id.homeFragment, HomeFragment())
-                        .commitAllowingStateLoss()
-                }
-                R.id.plantFragment -> {
-                    supportFragmentManager
-                        .beginTransaction()
-                        .replace(R.id.plantFragment, PlantFragment())
-                        .commitAllowingStateLoss()
-                }
-                //위의 setOnItemSelectedListener의 return값 설정
+                true
 
             }
-            true
+            selectedItemId = R.id.homeFragment
+
         }
+    }
+
+
 }
