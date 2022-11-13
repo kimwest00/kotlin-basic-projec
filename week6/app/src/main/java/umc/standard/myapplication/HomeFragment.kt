@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayoutMediator
 import umc.standard.myapplication.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -25,5 +26,9 @@ class HomeFragment : Fragment() {
         viewpagerAdapter = ViewPagerAdapter(this)
         viewPager = viewBindng.vpNews
         viewPager.adapter = viewpagerAdapter
+        var tabLayout = viewBindng.tabLayout
+        TabLayoutMediator(tabLayout,viewPager){tab,position ->
+            tab.text = "OBJECT ${(position + 1)}"
+        }.attach()
     }
 }
