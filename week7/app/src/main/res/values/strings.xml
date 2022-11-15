@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Thread</string>
+    <string name="timer_limit">30</string>
+</resources>
