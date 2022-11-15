@@ -10,21 +10,20 @@ import java.lang.Thread.sleep
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     var handler = Handler(Looper.getMainLooper())
-    var tmp_time = 30
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         Thread(){
-            if (tmp_time == 0){
-                binding.tvTimerLimit.setText("finish!")
-                Thread.interrupted()
+
+            for(i in 30 until 0){
+                Thread.sleep(1000)
+                handler.post{
+                    binding.tvTimerLimit.setText(i)
+                }
             }
-            Thread.sleep(1000)
-            handler.post{
-                binding.tvTimerLimit.setText(tmp_time)
-            }
-            tmp_time--
+
+            binding.tvTimerLimit.setText("finish!")
 
         }.start()
     }
