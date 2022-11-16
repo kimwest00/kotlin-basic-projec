@@ -1,10 +1,14 @@
 package umc.standard.thread
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import umc.standard.thread.databinding.ActivityMainBinding
+import java.util.Timer
+import kotlin.concurrent.thread
 
 
 class MainActivity : AppCompatActivity() {
@@ -14,19 +18,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        var handler = Handler(Looper.getMainLooper())
+        var text = binding.etTimerLimit.text
         binding.btTimerStart.setOnClickListener {
-            Thread(){
-                for(i in 30 until 0){
-                    Thread.sleep(1000)
-                    handler.post{
-                        binding.tvTimerLimit.setText(i)
-                        println("timer working at :")
-                        println(i)
-                    }
-                }
-                binding.tvTimerLimit.setText("finish!")
-            }.start()
+            val intent = Intent(this,TimerActivity::class.java)
+            intent.putExtra("time",text)
+            Log.d("before arrive",text.toString())
+            startActivity(intent)
         }
     }
 }
