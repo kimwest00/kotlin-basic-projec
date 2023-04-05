@@ -14,7 +14,7 @@ class TimerActivity:AppCompatActivity() {
         binding = ActivityTimerBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val extra = intent.extras
-        var time = extra?.get("time").toString().toInt()
+        var time = extra?.get("time")
         Log.d("time limit",time.toString())
         binding.tvTimerNum.text = time.toString()
         thread(start = true){
