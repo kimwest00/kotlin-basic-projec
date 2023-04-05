@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="31dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_back_arrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="서비스 이용 동의"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@id/iv_back_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="9dp"
+        android:layout_marginTop="45dp"
+        >
+        <ImageView
+            android:id="@+id/btn_allcheck"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/baseline_check_circle_outline_24"/>
+        <TextView
+            android:layout_marginStart="9dp"
+            android:id="@+id/tv_signup_email_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="약관 전체 동의"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginRight="16dp"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#9A9A9A"/>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="9dp">
+        <ImageView
+            android:id="@+id/btn_agecheck"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/baseline_check_circle_outline_24"/>
+        <TextView
+            android:layout_marginStart="9dp"
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_privacy"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginRight="16dp"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="9dp">
+        <ImageView
+            android:id="@+id/btn_servicecheck"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/baseline_check_circle_outline_24"/>
+        <TextView
+            android:layout_marginStart="9dp"
+            android:id="@+id/tv_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_service"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginRight="16dp"
+            android:layout_gravity="left"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:id="@+id/iv_service_policy_more"
+            android:layout_width="16dp"
+            android:layout_height="20dp"
+            android:src="@drawable/baseline_arrow_forward_ios_24" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="9dp">
+        <ImageView
+            android:id="@+id/btn_privatecheck"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/baseline_check_circle_outline_24"/>
+        <TextView
+            android:layout_marginStart="9dp"
+            android:id="@+id/tv_policy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_privacy"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginRight="16dp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:id="@+id/iv_private_policy_more"
+            android:layout_width="16dp"
+            android:layout_height="20dp"
+            android:src="@drawable/baseline_arrow_forward_ios_24"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_agree_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="동의"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:paddingVertical="14dp"
+        android:textStyle="bold"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/btn_resource_disable"
+        />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
